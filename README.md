@@ -10,6 +10,7 @@ Currently Based on Laravel 5.0
 - OpenSSL PHP Extension
 - Mbstring PHP Extension
 - Tokenizer PHP Extension
+- MySQL Database Server
 
 ## Installation
 Please following these instructions : 
@@ -27,6 +28,9 @@ Please following these instructions :
 - **id** should as primary key 
 - **id_[other_table_name]** this is format for secondary key (field for relation)
 - **photo_[name]** this is not mandatory but i recommend you to use this format if you want the field as image field, replace [name] with your own suffix.
+- **password** use this field name if you want add password, so Crudbooster can auto hashing
+- **date_[name]** use this format of field if you want add column about 'date', so crudbooster know that this field is 'date'
+- **slug** use slug for naming your field if you want make a permalink function on your table, and crudbooster will be automaticaly set value for slug field become permalink function by title field
 - Get used to write a column name **clearly**. Avoid short name. Ex Correct : full_name, Ex Incorrect : fname
 
 ## Getting Started
@@ -53,6 +57,9 @@ After you've created new modul, then a new menu will be appeared at left (sideba
 
 ## Custom Controller and Form
 Unfortunately in many case that very complicated problem, you can still custom the Controller and Form as you want. **CRUDBooster**  designed to be smart tool and can adapt in many cases and conditions. Every modul will be create a new file controller in /App/Http/Controllers/ .
+
+## Dont Hack The Core (WARNING)
+We recommend you do not hack or modification files Controller in Folder ControllerMaster, or View in folder Admin. Because that files is used by CRUDBooster. If you hack that files, so your modification will be replace if you update your CRUDBooster.
 
 ## 1). Index Table List Data :
 ```php
